@@ -1,0 +1,20 @@
+from google.colab import drive
+drive.mount('/content/drive')
+import pandas as pd
+
+# Manually entering the data as a dictionary (since it's a small sample)
+data = {
+    'call_id': [4667960400, 1122072124, 6834291559, 2266439882, 1211603231, 5297766997, 324593040, 8902603117, 7222687732, 4113684017],
+    'agent_id': [963118, 519057, 158319, 488324, 721730, 817160, 519057, 488324, 957331, 158319],
+    'agent_tone': ['neutral', 'calm', 'neutral', 'neutral', 'neutral', 'calm', 'neutral', 'calm', 'calm', 'neutral'],
+    'customer_tone': ['angry', 'neutral', 'polite', 'frustrated', 'polite', 'calm', 'frustrated', 'angry', 'neutral', 'angry'],
+    'average_sentiment': [-0.04, 0.02, -0.13, -0.2, -0.05, 0.1, 0, 0.11, 0.06, -0.19],
+    'silence_percent_average': [0.39, 0.35, 0.32, 0.2, 0.35, 0.11, 0.25, 0.35, 0.54, None]  # Added 'None' to show missing value handling
+}
+
+# Creating the DataFrame
+dataset = pd.DataFrame(data)
+
+# Display the DataFrame
+print(dataset)
+
