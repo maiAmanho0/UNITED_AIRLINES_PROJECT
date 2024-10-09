@@ -1,0 +1,12 @@
+# Step 3: Fill missing values in 'silence_percent_average' with the column's mean
+mean_silence_percent = dataset['silence_percent_average'].mean()
+dataset['silence_percent_average'].fillna(mean_silence_percent, inplace=True)
+
+# Verify that there are no missing values left
+dataset.isnull().sum()
+# Step 3: Drop rows where 'silence_percent_average' has missing values
+dataset_cleaned = dataset.dropna(subset=['silence_percent_average'])
+
+# Verify that there are no missing values left
+dataset_cleaned.isnull().sum()
+
