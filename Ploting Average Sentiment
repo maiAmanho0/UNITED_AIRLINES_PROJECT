@@ -1,0 +1,5 @@
+sns.histplot(dataset['average_sentiment'], bins=10, kde=True)
+plt.title("Distribution of Average Sentiment Scores")
+plt.show()
+
+
