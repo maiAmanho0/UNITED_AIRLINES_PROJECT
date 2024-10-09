@@ -1,0 +1,6 @@
+# Scatter plot between average sentiment and silence percentage
+plt.figure(figsize=(8,6))
+sns.scatterplot(x='average_sentiment', y='silence_percent_average', data=dataset)
+plt.title("Sentiment vs Silence Percentage")
+plt.show()
+
