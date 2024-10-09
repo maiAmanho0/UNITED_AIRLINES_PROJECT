@@ -1,0 +1,14 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Plot the counts of different agent tones and customer tones
+plt.figure(figsize=(10,5))
+sns.countplot(x='agent_tone', data=dataset)
+plt.title("Distribution of Agent Tones")
+plt.show()
+
+plt.figure(figsize=(10,5))
+sns.countplot(x='customer_tone', data=dataset)
+plt.title("Distribution of Customer Tones")
+plt.show()
+
