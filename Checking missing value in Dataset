@@ -1,0 +1,9 @@
+# Step 2: Check for missing values in each column
+missing_values = dataset.isnull().sum()
+print("Missing values in each column:\n", missing_values)
+
+# Step 2: Calculate the percentage of missing values
+missing_percentage = (missing_values / len(dataset)) * 100
+print("Percentage of missing values in each column:\n", missing_percentage)
+
+
